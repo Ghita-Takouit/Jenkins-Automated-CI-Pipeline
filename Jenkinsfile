@@ -1,9 +1,12 @@
 pipeline{
     agent any
+    
     stages{
         stage('Checkout'){
             steps{
-                git 'https://github.com/Ghita-Takouit/Jenkins-Automated-CI-Pipeline.git'
+                git branch: 'main',
+                url: 'https://github.com/Ghita-Takouit/Jenkins-Automated-CI-Pipeline.git',
+                credentialsId: 'd09be296-d9a7-4e81-9530-2b31eb121b33'
             }
         }
         stage('Build'){
