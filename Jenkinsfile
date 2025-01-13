@@ -34,7 +34,7 @@ pipeline{
                  body: "The build was successful. You can check the details at ${env.BUILD_URL}"
         }
         failure {
-            mail to: 'rtakouit@gmail.com',
+            mail to: 'rtakouit7@gmail.com',
                  subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                  body: "The build failed. Please check the logs: ${env.BUILD_URL}"
         }
